@@ -1,0 +1,10 @@
+[{
+  "button": "button1",
+  "modifiers": ["shift"],
+  "count": 2,
+  "press_command": "valgrind_open_callstack_file",
+  "press_args": {
+      "command": "drag_select", 
+      "args": {"by": "words"}
+  }
+}]

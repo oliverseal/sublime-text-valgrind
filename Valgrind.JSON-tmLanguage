@@ -1,0 +1,28 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+{ "name": "Valgrind",
+  "scopeName": "source.valgrind",
+  "fileTypes": ["valgrind"],
+  "uuid": "2147c2a2-77e9-439a-9d12-8286e44a5fa6",
+
+  "patterns": [
+  {
+      "match": "^==\\d+==",
+      "name": "comment.valgrind",
+      "comment": "PID labels."
+  },
+  {
+      "match": "(by|at) (0x[0-9a-zA-Z]+):\\s(.+?) \\(((in [0-9\\.\\-\\\\\\/_a-zA-Z]+)|([0-9\\.\\-\\\\\/_a-zA-Z]+)(:(\\d+)|))\\)",
+      "name": "text.valgrind.stack",
+      "captures": {
+          "1": {"name": "support.type.valgrind"},
+          "2": {"name": "constant.numeric.valgrind"},
+          "3": {"name": "entity.name.function.valgrind"},
+          "4": {"name": "string.valgrind.filename"},
+          "6": {"name": "string.other.link.valgrind.filename"},
+          "7": {"name": "text.valgrind.stack"},
+          "8": {"name": "constant.numeric.valgrind"}
+      },
+      "comment": "Call stacks."
+  }
+  ]
+}

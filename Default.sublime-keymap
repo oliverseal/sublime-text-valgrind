@@ -1,0 +1,8 @@
+[
+    {
+        "command": "valgrind_open_callstack_file", "keys": ["ctrl+shift+g"],
+        "context": [
+            {"key": "selector", "operator": "equal", "operand":  "source.valgrind"}
+        ]
+    }
+]

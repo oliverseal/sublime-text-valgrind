@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>valgrind</string>
+	</array>
+	<key>name</key>
+	<string>Valgrind</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>PID labels.</string>
+			<key>match</key>
+			<string>^==\d+==</string>
+			<key>name</key>
+			<string>comment.valgrind</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.type.valgrind</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.valgrind</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.valgrind</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.valgrind.filename</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>string.other.link.valgrind.filename</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>text.valgrind.stack</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric.valgrind</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Call stacks.</string>
+			<key>match</key>
+			<string>(by|at) (0x[0-9a-zA-Z]+):\s(.+?) \(((in [0-9\.\-\\\/_a-zA-Z]+)|([0-9\.\-\\/_a-zA-Z]+)(:(\d+)|))\)</string>
+			<key>name</key>
+			<string>text.valgrind.stack</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.valgrind</string>
+	<key>uuid</key>
+	<string>2147c2a2-77e9-439a-9d12-8286e44a5fa6</string>
+</dict>
+</plist>
